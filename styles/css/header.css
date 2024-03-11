@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Inder&family=Fredoka&display=swap");
+:root {
+  --background-light: #FFFFFF;
+  --background-base: #FFEBF2;
+  --background-dark: #FFD9E6;
+  --text-primary: #000000;
+  --text-secondary: #FFFFFF;
+  --accent-light: #FCBAD0;
+  --accent-base: #FF74B3;
+  --accent-dark: #FF4599;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inder", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Change selection color */
+::-moz-selection {
+  background-color: var(--accent-light);
+  color: var(--text-primary);
+}
+::selection {
+  background-color: var(--accent-light);
+  color: var(--text-primary);
+}
+
+/* Fallback for older browsers */
+::-moz-selection {
+  background-color: var(--accent-light);
+  color: var(--text-primary);
+}
+
+.hidden {
+  display: none !important;
+}/*# sourceMappingURL=header.css.map */

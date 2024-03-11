@@ -1,0 +1,185 @@
+main {
+  background-color: var(--background-light);
+  overflow: hidden;
+}
+main .circle {
+  position: absolute;
+  top: 13rem;
+  left: 20rem;
+  width: 4rem;
+  fill: var(--background-base);
+}
+main .donut {
+  position: absolute;
+  top: -5rem;
+  right: 20rem;
+  width: 12rem;
+  height: 12rem;
+  fill: var(--background-dark);
+}
+main .ring {
+  position: absolute;
+  bottom: -10rem;
+  left: -16rem;
+  width: 40rem;
+  height: 40rem;
+  fill: var(--background-base);
+}
+main .ring path {
+  -webkit-transform: scale(1, -1) translateY(-300px) rotate(-8deg);
+          transform: scale(1, -1) translateY(-300px) rotate(-8deg);
+}
+
+.search-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.search-container .hey {
+  width: 8rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+.search-container > div {
+  background-color: var(--text-primary);
+  outline: 2px solid var(--text-primary);
+  border-radius: 40px;
+  margin: 0.1rem 2rem 0.6rem 2rem;
+  height: 2.5rem;
+  z-index: 999;
+}
+.search-container > div svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  height: 1.3rem;
+}
+.search-container > div input {
+  font-family: "Fredoka", sans-serif !important;
+  padding: 0 0.8rem 0 3rem;
+  background-color: var(--background-light);
+  border-radius: 40px;
+}
+.search-container > div input::-webkit-input-placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container > div input::-moz-placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container > div input:-ms-input-placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container > div input::-ms-input-placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container > div input::placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container a {
+  font-family: "Inder", sans-serif;
+  color: var(--accent-base);
+}
+.search-container .results {
+  display: none;
+  width: 19rem;
+  position: absolute;
+  top: 100%;
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.search-container .results > div {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border: 2px solid var(--text-primary);
+  border-radius: 15px;
+}
+.search-container .results > div > span {
+  padding: 0.3rem 0 0.3rem 0.6rem;
+}
+.search-container .results > div .top-row,
+.search-container .results > div .bottom-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-left: 0.6rem;
+}
+.search-container .results > div .top-row {
+  background-color: var(--background-light);
+}
+.search-container .results > div .bottom-row {
+  background-color: var(--background-base);
+}
+.search-container .results > div a,
+.search-container .results > div span {
+  width: 100%;
+  text-align: left;
+  color: var(--text-primary);
+  white-space: normal;
+}
+.search-container .results > div span {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.search-container .results > div .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4.5rem;
+}
+.search-container .results > div .buttons #hide,
+.search-container .results > div .buttons #approve {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 5rem;
+}
+.search-container .results > div .buttons #hide:hover,
+.search-container .results > div .buttons #approve:hover {
+  cursor: pointer;
+  background-color: var(--background-base);
+}
+.search-container .results > div .buttons #hide .cross path {
+  fill: #D80000;
+}
+.search-container .results > div .buttons #approve {
+  padding-right: 0.2rem;
+}
+.search-container .results > div .buttons #approve .tick path {
+  fill: #21EF00;
+}/*# sourceMappingURL=styles.css.map */

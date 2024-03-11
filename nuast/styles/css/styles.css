@@ -1,0 +1,405 @@
+main {
+  background-color: var(--background-light);
+  overflow: hidden;
+}
+main .circle {
+  position: absolute;
+  top: 13rem;
+  left: 20rem;
+  width: 4rem;
+  fill: var(--background-base);
+}
+main .donut {
+  position: absolute;
+  top: -5rem;
+  right: 20rem;
+  width: 12rem;
+  height: 12rem;
+  fill: var(--background-dark);
+}
+main .ring {
+  position: absolute;
+  bottom: -10rem;
+  left: -16rem;
+  width: 40rem;
+  height: 40rem;
+  fill: var(--background-base);
+}
+main .ring path {
+  -webkit-transform: scale(1, -1) translateY(-300px) rotate(-8deg);
+          transform: scale(1, -1) translateY(-300px) rotate(-8deg);
+}
+
+.search-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.search-container .find {
+  width: 8rem;
+  margin-bottom: 1rem;
+}
+.search-container > div {
+  background-color: var(--text-primary);
+  outline: 2px solid var(--text-primary);
+  border-radius: 40px;
+  margin: 0.1rem 2rem 0.6rem 2rem;
+  height: 2.5rem;
+  z-index: 999;
+}
+.search-container > div svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  height: 1.3rem;
+}
+.search-container > div input {
+  font-family: "Fredoka", sans-serif !important;
+  padding: 0 0.8rem 0 3rem;
+  background-color: var(--background-light);
+  border-radius: 40px;
+}
+.search-container > div input::-webkit-input-placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container > div input::-moz-placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container > div input:-ms-input-placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container > div input::-ms-input-placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container > div input::placeholder {
+  font-family: "Fredoka", sans-serif !important;
+}
+.search-container > a {
+  font-family: "Inder", sans-serif;
+  color: var(--accent-base);
+}
+.search-container > a:hover {
+  opacity: 0.6;
+}
+.search-container .results {
+  display: none;
+  overflow-y: scroll;
+  width: 19rem;
+  border: 2px solid var(--text-primary);
+  border-radius: 15px 0 0 15px;
+  position: absolute;
+  top: 100%;
+  margin-top: -1.2rem;
+  max-height: 10rem;
+  /* For WebKit-based browsers (Chrome, Safari) */
+}
+.search-container .results::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+.search-container .results::-webkit-scrollbar-thumb {
+  background-color: var(--accent-base); /* Color of the thumb (dragged part) */
+}
+.search-container .results::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-dark); /* Color of the thumb on hover */
+}
+.search-container .results::-webkit-scrollbar-track {
+  background-color: var(--accent-light); /* Color of the track (background) */
+}
+.search-container .results a,
+.search-container .results div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--background-light);
+  min-height: 2rem;
+  width: 100%;
+  padding-left: 0.6rem;
+  padding-right: 0.4rem;
+}
+.search-container .results a span,
+.search-container .results div span {
+  width: 100%;
+  text-align: left;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-container .results a span .highlight,
+.search-container .results div span .highlight {
+  color: var(--accent-dark);
+}
+.search-container .results a:hover,
+.search-container .results div:hover {
+  height: -webkit-min-content !important;
+  height: -moz-min-content !important;
+  height: min-content !important;
+  min-height: -webkit-min-content !important;
+  min-height: -moz-min-content !important;
+  min-height: min-content !important;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.search-container .results a:hover span,
+.search-container .results div:hover span {
+  white-space: normal;
+}
+.search-container .results a:hover:has(span) {
+  cursor: pointer;
+  background-color: var(--accent-base) !important;
+}
+.search-container .results a:hover:has(span) span {
+  color: var(--text-secondary);
+}
+.search-container .results a:hover:has(span) span .highlight {
+  color: var(--text-secondary);
+}
+.search-container .results a:nth-child(even) {
+  background-color: var(--background-base);
+}
+.search-container .results a:nth-child(odd) {
+  background-color: var(--background-light);
+}
+
+.resource-creator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.resource-creator .resource-creator-button {
+  width: 5rem;
+  height: 5rem;
+  border-top-left-radius: 2.5rem;
+  background-color: var(--accent-base);
+  z-index: 10;
+}
+.resource-creator .resource-creator-button svg {
+  margin-left: 0.2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.resource-creator .resource-creator-button svg path {
+  fill: var(--text-secondary);
+}
+.resource-creator .resource-creator-button:hover {
+  cursor: pointer;
+}
+.resource-creator .resource-creator-button:hover svg {
+  -webkit-animation: wave 0.5s ease forwards;
+          animation: wave 0.5s ease forwards;
+}
+.resource-creator .popup {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top-left-radius: 2.5rem;
+  background: var(--accent-base);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.resource-creator .popup.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 22rem;
+  height: 13rem;
+}
+.resource-creator .popup .create-container,
+.resource-creator .popup .continue-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 1.2rem;
+}
+.resource-creator .popup .create-container h3,
+.resource-creator .popup .continue-container h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.resource-creator .popup .create-container input,
+.resource-creator .popup .continue-container input {
+  font-size: 0.96rem;
+  padding: 0.1rem 0.2rem;
+}
+.resource-creator .popup .create-container button,
+.resource-creator .popup .continue-container button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--background-light);
+  padding: 0.3rem 0.8rem;
+  gap: 0.6rem;
+  border: 2px solid var(--text-primary);
+  border-radius: 8px;
+}
+.resource-creator .popup .create-container button span,
+.resource-creator .popup .continue-container button span {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.resource-creator .popup .create-container button:hover,
+.resource-creator .popup .continue-container button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.resource-creator .popup .create-container button.disabled,
+.resource-creator .popup .continue-container button.disabled {
+  opacity: 0.6;
+}
+.resource-creator .popup .create-container button.disabled:hover,
+.resource-creator .popup .continue-container button.disabled:hover {
+  cursor: not-allowed;
+}
+.resource-creator .popup .create-container {
+  display: none;
+}
+.resource-creator .popup .create-container.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.resource-creator .popup .create-container > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 0 3rem;
+  gap: 1rem;
+}
+.resource-creator .popup .create-container > div label {
+  font-family: "Fredoka", sans-serif;
+  color: var(--text-secondary);
+}
+.resource-creator .popup .create-container > div input {
+  width: 100%;
+  color: var(--text-secondary);
+  margin-bottom: 0.2rem;
+  border-bottom: 2px solid var(--text-secondary);
+}
+.resource-creator .popup .create-container > div input:focus {
+  background-color: var(--accent-dark);
+}
+.resource-creator .popup .create-container button {
+  margin-top: 0.6rem;
+}
+.resource-creator .popup .create-container button svg {
+  width: 1.2rem;
+}
+.resource-creator .popup .create-container button svg path {
+  fill: var(--text-primary);
+}
+.resource-creator .popup .continue-container {
+  display: none;
+}
+.resource-creator .popup .continue-container p {
+  margin-bottom: 0.5rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+.resource-creator .popup .continue-container.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  60% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  60% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@media (max-width: 1200px) {
+  main .circle {
+    top: 11rem;
+    left: -1.5rem;
+  }
+  main .donut {
+    right: -5rem;
+  }
+  main .ring {
+    bottom: -15rem;
+    left: -28rem;
+  }
+}
+@media (max-width: 500px) {
+  .resource-creator .popup.active {
+    width: 100vw !important;
+  }
+}/*# sourceMappingURL=styles.css.map */
